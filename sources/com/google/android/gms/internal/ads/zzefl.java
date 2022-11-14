@@ -1,0 +1,20 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@20.3.0 */
+public final /* synthetic */ class zzefl implements zzfpl {
+    public final zzefq zza;
+    public final zzeye zzb;
+    public final zzeyq zzc;
+    public final zzdsj zzd;
+
+    public zzefl(zzefq zzefq, zzeye zzeye, zzeyq zzeyq, zzdsj zzdsj) {
+        this.zza = zzefq;
+        this.zzb = zzeye;
+        this.zzc = zzeyq;
+        this.zzd = zzdsj;
+    }
+
+    public final zzfqn zza(Object obj) {
+        return this.zza.zzc(this.zzb, this.zzc, this.zzd, obj);
+    }
+}

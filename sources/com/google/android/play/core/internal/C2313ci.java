@@ -1,0 +1,9 @@
+package com.google.android.play.core.internal;
+
+/* renamed from: com.google.android.play.core.internal.ci */
+public final class C2313ci extends C2308cd {
+    /* renamed from: a */
+    public final void mo33290a(Throwable th, Throwable th2) {
+        th.addSuppressed(th2);
+    }
+}

@@ -1,0 +1,10 @@
+package com.helpshift.util;
+
+import java.util.Map;
+
+public class MapUtil {
+    public static <T> T getValue(Map<String, Object> map, String str, Class<T> cls, T t) {
+        Object obj = map.get(str);
+        return cls.isInstance(obj) ? cls.cast(obj) : t;
+    }
+}

@@ -1,0 +1,16 @@
+package com.google.firebase.installations;
+
+/* compiled from: FirebaseInstallations */
+public final /* synthetic */ class FirebaseInstallations$$Lambda$2 implements Runnable {
+    public final FirebaseInstallations arg$1;
+    public final boolean arg$2;
+
+    public FirebaseInstallations$$Lambda$2(FirebaseInstallations firebaseInstallations, boolean z) {
+        this.arg$1 = firebaseInstallations;
+        this.arg$2 = z;
+    }
+
+    public void run() {
+        this.arg$1.doRegistrationOrRefresh(this.arg$2);
+    }
+}

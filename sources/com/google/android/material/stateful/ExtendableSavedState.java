@@ -1,0 +1,66 @@
+package com.google.android.material.stateful;
+
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
+import androidx.collection.SimpleArrayMap;
+import androidx.customview.view.AbsSavedState;
+import com.android.tools.p006r8.GeneratedOutlineSupport;
+
+public class ExtendableSavedState extends AbsSavedState {
+    public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new Parcelable.ClassLoaderCreator<ExtendableSavedState>() {
+        public Object createFromParcel(Parcel parcel, ClassLoader classLoader) {
+            return new ExtendableSavedState(parcel, classLoader, (C21591) null);
+        }
+
+        public Object[] newArray(int i) {
+            return new ExtendableSavedState[i];
+        }
+
+        public Object createFromParcel(Parcel parcel) {
+            return new ExtendableSavedState(parcel, (ClassLoader) null, (C21591) null);
+        }
+    };
+    public final SimpleArrayMap<String, Bundle> extendableStates;
+
+    public ExtendableSavedState(Parcelable parcelable) {
+        super(parcelable);
+        this.extendableStates = new SimpleArrayMap<>();
+    }
+
+    public String toString() {
+        StringBuilder outline24 = GeneratedOutlineSupport.outline24("ExtendableSavedState{");
+        outline24.append(Integer.toHexString(System.identityHashCode(this)));
+        outline24.append(" states=");
+        outline24.append(this.extendableStates);
+        outline24.append("}");
+        return outline24.toString();
+    }
+
+    public void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        int size = this.extendableStates.size();
+        parcel.writeInt(size);
+        String[] strArr = new String[size];
+        Bundle[] bundleArr = new Bundle[size];
+        for (int i2 = 0; i2 < size; i2++) {
+            strArr[i2] = this.extendableStates.keyAt(i2);
+            bundleArr[i2] = this.extendableStates.valueAt(i2);
+        }
+        parcel.writeStringArray(strArr);
+        parcel.writeTypedArray(bundleArr, 0);
+    }
+
+    public ExtendableSavedState(Parcel parcel, ClassLoader classLoader, C21591 r7) {
+        super(parcel, classLoader);
+        int readInt = parcel.readInt();
+        String[] strArr = new String[readInt];
+        parcel.readStringArray(strArr);
+        Bundle[] bundleArr = new Bundle[readInt];
+        parcel.readTypedArray(bundleArr, Bundle.CREATOR);
+        this.extendableStates = new SimpleArrayMap<>(readInt);
+        for (int i = 0; i < readInt; i++) {
+            this.extendableStates.put(strArr[i], bundleArr[i]);
+        }
+    }
+}

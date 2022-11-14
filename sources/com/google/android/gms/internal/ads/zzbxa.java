@@ -1,0 +1,37 @@
+package com.google.android.gms.internal.ads;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.RemoteException;
+import com.google.android.gms.dynamic.IObjectWrapper;
+
+/* compiled from: com.google.android.gms:play-services-ads-lite@@20.3.0 */
+public final class zzbxa extends zzhs implements zzbxc {
+    public zzbxa(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.mediation.client.rtb.IBannerCallback");
+    }
+
+    public final void zze(IObjectWrapper iObjectWrapper) throws RemoteException {
+        Parcel zza = zza();
+        zzhu.zzf(zza, iObjectWrapper);
+        zzbr(1, zza);
+    }
+
+    public final void zzf(String str) throws RemoteException {
+        Parcel zza = zza();
+        zza.writeString("Adapter returned null.");
+        zzbr(2, zza);
+    }
+
+    public final void zzg(zzbdd zzbdd) throws RemoteException {
+        Parcel zza = zza();
+        zzhu.zzd(zza, zzbdd);
+        zzbr(3, zza);
+    }
+
+    public final void zzh(zzbvq zzbvq) throws RemoteException {
+        Parcel zza = zza();
+        zzhu.zzf(zza, zzbvq);
+        zzbr(4, zza);
+    }
+}

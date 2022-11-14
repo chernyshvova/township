@@ -1,0 +1,17 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@20.3.0 */
+public final /* synthetic */ class zziz implements zzajw {
+    public final zzlj zza;
+    public final int zzb;
+
+    public zziz(zzlj zzlj, int i) {
+        this.zza = zzlj;
+        this.zzb = i;
+    }
+
+    public final void zza(Object obj) {
+        zzlj zzlj = this.zza;
+        ((zzlq) obj).zzn(zzlj.zzl, this.zzb);
+    }
+}
